@@ -13,3 +13,7 @@ LIMIT 10;
 SELECT *
 FROM product
 LIMIT 10;
+
+SELECT *
+FROM sales
+LIMIT 10;
