@@ -9,3 +9,7 @@ LIMIT 10;
 SELECT *
 FROM date
 LIMIT 10;
+
+SELECT *
+FROM product
+LIMIT 10;
