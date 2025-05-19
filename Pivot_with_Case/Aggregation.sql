@@ -1,11 +1,13 @@
 SELECT 
-    orderdate,
-    COUNT(DISTINCT customerkey) AS total_customer
+    sales.orderdate,
+    COUNT(DISTINCT sales.customerkey) AS total_customer,
+    COUNT(DISTINCT CASE WHEN customer.continent = 'Europe' THEN sales.customerkey END) AS eu_customers
 FROM 
     sales
+LEFT JOIN customer ON customer.customerkey = sales.customerkey
 WHERE
-    orderdate BETWEEN '2023-01-01' AND '2023-12-31'
+    sales.orderdate BETWEEN '2023-01-01' AND '2023-12-31'
 GROUP BY
-    orderdate
+    sales.orderdate
 ORDER BY
-    orderdate;
+    sales.orderdate;
