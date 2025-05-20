@@ -1,3 +1,17 @@
+/* COUNT(CASE WHEN)
+SYNTAX:
+
+COUNT(DISTINCT CASE WHEN condition THEN column END) AS allias
+
+EXAMPLE:
+
+SELECT 
+    COUNT(DISTINCT CASE WHEN status = 'active' THEN user_id END) AS active_users
+FROM 
+    users;
+*/
+
+
 SELECT 
     sales.orderdate,
     COUNT(DISTINCT sales.customerkey) AS total_customer,
