@@ -11,3 +11,14 @@ SELECT
 FROM 
     sales_data;
 */
+
+SELECT
+    product.categoryname,
+    SUM(sales.quantity * sales.netprice * sales.exchangerate) AS net_revenue
+FROM
+    sales
+LEFT JOIN product ON sales.productkey = product.productkey
+GROUP BY
+    product.categoryname
+ORDER BY
+    product.categoryname;
