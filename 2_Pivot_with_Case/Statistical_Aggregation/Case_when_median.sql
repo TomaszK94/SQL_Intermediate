@@ -19,7 +19,9 @@ FROM
 
 SELECT
     product.categoryname,
-    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY sales.quantity * sales.netprice * sales.exchangerate) AS median_sales
+    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY (CASE 
+        WHEN sales.orderdate BETWEEN '2022-01-01' AND '2022-12-31' THEN (sales.quantity * sales.netprice * sales.exchangerate) 
+    END)) AS median_sales_2022
 FROM
     sales
 LEFT JOIN product ON sales.productkey = product.productkey
