@@ -11,3 +11,7 @@ WHERE
     column_name IS NOT NULL;
 */
 
+SELECT
+    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY netprice) AS median
+FROM
+    sales
