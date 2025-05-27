@@ -14,4 +14,16 @@ WHERE
 SELECT
     PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY netprice) AS median
 FROM
+    sales;
+
+
+SELECT
+    product.categoryname,
+    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY sales.quantity * sales.netprice * sales.exchangerate) AS median_sales
+FROM
     sales
+LEFT JOIN product ON sales.productkey = product.productkey
+GROUP BY
+    product.categoryname
+ORDER BY
+    product.categoryname; 
