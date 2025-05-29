@@ -15,7 +15,8 @@ SELECT
     quantity,
     netprice,
     CASE WHEN quantity >=2 AND netprice >= 50 THEN 'High Value Order'
-        ELSE 'Standard Order' END AS order_value
+        ELSE 'Standard Order' 
+    END AS order_value
 FROM
     sales
-LIMIT 10;
+LIMIT 50;
