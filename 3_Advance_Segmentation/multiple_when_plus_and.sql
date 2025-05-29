@@ -41,23 +41,23 @@ WITH median_value_2022_2023 AS (
 
 SELECT
     product.categoryname,
-    SUM(CASE WHEN (sales.quantity * sales.netprice * sales.exchangerate) < median
+    SUM(CASE WHEN (sales.quantity * sales.netprice * sales.exchangerate) < mv.median
             AND sales.orderdate BETWEEN '2022-01-01' AND '2022-12-31'
         THEN (sales.quantity * sales.netprice * sales.exchangerate) END) AS low_net_revenue_2022,
-    SUM(CASE WHEN (sales.quantity * sales.netprice * sales.exchangerate) >= median 
+    SUM(CASE WHEN (sales.quantity * sales.netprice * sales.exchangerate) >= mv.median 
             AND sales.orderdate BETWEEN '2022-01-01' AND '2022-12-31'
         THEN (sales.quantity * sales.netprice * sales.exchangerate) END) AS high_net_revenue_2022,
-    SUM(CASE WHEN (sales.quantity * sales.netprice * sales.exchangerate) < median 
+    SUM(CASE WHEN (sales.quantity * sales.netprice * sales.exchangerate) < mv.median
             AND sales.orderdate BETWEEN '2023-01-01' AND '2023-12-31'
         THEN (sales.quantity * sales.netprice * sales.exchangerate) END) AS low_net_revenue_2023,
-    SUM(CASE WHEN (sales.quantity * sales.netprice * sales.exchangerate) >= median 
+    SUM(CASE WHEN (sales.quantity * sales.netprice * sales.exchangerate) >= mv.median
             AND sales.orderdate BETWEEN '2023-01-01' AND '2023-12-31'
         THEN (sales.quantity * sales.netprice * sales.exchangerate) END) AS high_net_revenue_2023
 FROM
     sales
 LEFT JOIN 
     product ON sales.productkey = product.productkey,
-    median_value_2022_2023 AS median
+    median_value_2022_2023 AS mv
 GROUP BY
     product.categoryname
 ORDER BY
