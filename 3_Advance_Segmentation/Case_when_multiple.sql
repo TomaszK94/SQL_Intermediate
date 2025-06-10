@@ -8,3 +8,16 @@ WITH percentile AS (
     WHERE
         orderdate BETWEEN '2022-01-01' AND '2023-12-31'
 )
+
+SELECT
+    product.categoryname,
+    SUM(sales.quantity * sales.netprice * sales.exchangerate) AS total_revenue
+FROM
+    sales
+LEFT JOIN 
+    product ON sales.productkey = product.productkey,
+    percentile
+GROUP BY
+    product.categoryname
+ORDER BY
+    product.categoryname; 
