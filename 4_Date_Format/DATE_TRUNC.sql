@@ -22,6 +22,7 @@ SELECT
     COUNT(DISTINCT customerkey) AS unique_customers
 FROM
     sales
+WHERE
+    orderdate BETWEEN '2023-01-01' AND '2024-12-31'
 GROUP BY
-    order_month
-LIMIT 10;
+    order_month;
