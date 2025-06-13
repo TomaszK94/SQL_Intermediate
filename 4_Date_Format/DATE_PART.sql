@@ -1,5 +1,5 @@
 /*
-DATE_PART() - extract specific components (y,m,d) from date or timestamp
+DATE_PART() - extract specific components (y,m,d) from date or timestamp --> float number
 
 SYNTAX:
 DATE_PART('UNIT', source)
