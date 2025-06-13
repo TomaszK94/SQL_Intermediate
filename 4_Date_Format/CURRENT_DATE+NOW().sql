@@ -19,6 +19,8 @@ FROM
     sales
 LEFT JOIN 
     product ON sales.productkey = product.productkey
+WHERE
+    EXTRACT(YEAR FROM CURRENT_DATE) - 5 <= EXTRACT(YEAR FROM orderdate)
 GROUP BY
     sales.orderdate,
     product.categoryname
