@@ -13,8 +13,17 @@ SELECT
 
 SELECT 
     CURRENT_DATE,
-    orderdate
+    s.orderdate,
+    p.categoryname,
+    SUM(s.quantity * s.netprice * s.exchangerate) AS net_revenue
 FROM
-    sales
+    sales AS s
+LEFT JOIN product AS p ON s.productkey = p.productkey
 WHERE
     CURRENT_DATE - INTERVAL '5 years' <= orderdate
+GROUP BY
+    s.orderdate,
+    p.categoryname
+ORDER BY
+    s.orderdate,
+    p.categoryname;
