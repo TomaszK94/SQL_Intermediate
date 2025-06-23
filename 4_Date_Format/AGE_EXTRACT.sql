@@ -12,6 +12,8 @@ SELECT
     ROUND(AVG(EXTRACT(DAY FROM AGE(deliverydate, orderdate))),2) AS avg_processing_time
 FROM
     sales
+WHERE
+    orderdate >= CURRENT_DATE - INTERVAL '5 years'
 GROUP BY 
     order_year
 ORDER BY
