@@ -1,3 +1,14 @@
+/*
+SYNTAX:
+
+SELECT
+    window_function() OVER(
+        PARTITION BY partition_expression
+    ) AS window_column_alias
+FROM
+    table_name
+*/
+
 SELECT
     customerkey,
     orderkey,
