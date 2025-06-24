@@ -7,6 +7,12 @@ SELECT
     ) AS window_column_alias
 FROM
     table_name
+
+
+OVER() - Defines the window for the function. It can include PARTITION BY and other functions.
+
+PARTITION BY - Divides the results set into partitions. The function is then applied to each partition.
+
 */
 
 SELECT
