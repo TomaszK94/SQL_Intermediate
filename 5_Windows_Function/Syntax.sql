@@ -25,5 +25,18 @@ FROM
     sales
 ORDER BY
     customerkey
-LIMIT 10;
+LIMIT 20;
 
+--------
+
+SELECT
+    customerkey,
+    orderkey,
+    linenumber,
+    (quantity * netprice * exchangerate) AS net_revenue,
+    AVG(quantity * netprice * exchangerate) OVER(PARTITION BY orderkey) AS avg_net_revenue_all_orders
+FROM
+    sales
+ORDER BY
+    customerkey
+LIMIT 20;
