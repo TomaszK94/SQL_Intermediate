@@ -40,3 +40,19 @@ FROM
 ORDER BY
     customerkey
 LIMIT 20;
+
+
+--------
+
+
+SELECT
+    customerkey,
+    orderdate,
+    (quantity * netprice * exchangerate) AS net_revenue,
+    ROW_NUMBER() OVER (PARTITION BY customerkey ORDER BY (quantity * netprice * exchangerate) DESC) AS order_rank
+FROM
+    sales
+ORDER BY
+    customerkey,
+    order_rank
+LIMIT 20;
