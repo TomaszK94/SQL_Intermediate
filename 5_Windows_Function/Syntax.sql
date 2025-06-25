@@ -55,7 +55,8 @@ SELECT
         ) AS order_rank,
     SUM(quantity * netprice * exchangerate) OVER(
         PARTITION BY customerkey
-    ) AS customer_total
+    ) AS customer_total,
+    (quantity * netprice * exchangerate) / SUM(quantity * netprice * exchangerate) OVER (PARTITION BY customerkey) * 100 AS percent_of_total
 FROM
     sales
 ORDER BY
