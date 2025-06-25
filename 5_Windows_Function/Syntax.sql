@@ -49,10 +49,16 @@ SELECT
     customerkey,
     orderdate,
     (quantity * netprice * exchangerate) AS net_revenue,
-    ROW_NUMBER() OVER (PARTITION BY customerkey ORDER BY (quantity * netprice * exchangerate) DESC) AS order_rank
+    ROW_NUMBER() OVER (
+        PARTITION BY customerkey 
+        ORDER BY (quantity * netprice * exchangerate) DESC
+        ) AS order_rank,
+    SUM(quantity * netprice * exchangerate) OVER(
+        PARTITION BY customerkey
+    ) AS customer_total
 FROM
     sales
 ORDER BY
     customerkey,
-    order_rank
+    orderdate
 LIMIT 20;
