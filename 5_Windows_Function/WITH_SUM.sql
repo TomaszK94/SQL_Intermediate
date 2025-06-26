@@ -6,4 +6,7 @@ SELECT
     (quantity * netprice * exchangerate) * 100 / SUM(quantity * netprice * exchangerate) OVER(PARTITION BY orderdate) AS percent_daily
 FROM
     sales
+ORDER BY
+    orderdate,
+    percent_daily DESC
 LIMIT 100;
