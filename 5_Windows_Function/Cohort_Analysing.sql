@@ -35,4 +35,4 @@ FROM
 LEFT JOIN yearly_cohort y ON s.customerkey = y.customerkey
 GROUP BY
     y.cohort_year,
-    EXTRACT(YEAR FROM s.orderdate)
+    purchase_year
