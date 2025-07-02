@@ -28,4 +28,5 @@ FROM
 
 SELECT *
 FROM
-    yearly_cohort
+    sales s
+LEFT JOIN yearly_cohort y ON s.customerkey = y.customerkey
