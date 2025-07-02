@@ -21,12 +21,18 @@ FROM
 WITH yearly_cohort AS(
 SELECT DISTINCT
     customerkey,
-    EXTRACT(YEAR FROM MIN(orderdate) OVER(PARTITION BY customerkey)) AS cohor_year
+    EXTRACT(YEAR FROM MIN(orderdate) OVER(PARTITION BY customerkey)) AS cohort_year
 FROM
     sales
 )
 
-SELECT *
+SELECT
+    y.cohort_year,
+    EXTRACT(YEAR FROM s.orderdate) AS purchase_year,
+    SUM(s.quantity * s.netprice * s.exchangerate) AS net_revenue
 FROM
     sales s
 LEFT JOIN yearly_cohort y ON s.customerkey = y.customerkey
+GROUP BY
+    y.cohort_year,
+    EXTRACT(YEAR FROM s.orderdate)
