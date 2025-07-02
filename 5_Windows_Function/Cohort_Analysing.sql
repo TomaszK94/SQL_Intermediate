@@ -7,3 +7,11 @@ FROM
 ORDER BY
     customerkey
 LIMIT 10;
+
+-----
+
+SELECT DISTINCT
+    customerkey,
+    EXTRACT(YEAR FROM MIN(orderdate) OVER(PARTITION BY customerkey)) AS cohor_year
+FROM
+    sales
