@@ -12,6 +12,7 @@ FROM
     table_name
 
 */
+
 WITH yearly_cohort AS(
 SELECT DISTINCT
     customerkey,
@@ -30,4 +31,4 @@ FROM
     yearly_cohort
 ORDER BY
     cohort_year,
-    purchase_year
+    purchase_year;
