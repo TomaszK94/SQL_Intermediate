@@ -12,3 +12,10 @@ FROM
     table_name
 
 */
+
+SELECT
+    customerkey,
+    EXTRACT(YEAR FROM (MIN(orderdate) OVER (PARTITION BY customerkey))) AS cohort_year,
+    EXTRACT(YEAR FROM orderdate) AS purchase_year
+FROM
+    sales
