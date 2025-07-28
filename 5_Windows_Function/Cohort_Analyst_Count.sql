@@ -21,12 +21,13 @@ FROM
     sales
 )
 
-SELECT 
-    customerkey,
+SELECT DISTINCT
     cohort_year,
-    purchase_year
+    purchase_year,
+    COUNT(customerkey) OVER (PARTITION BY cohort_year, purchase_year) AS number_of_customers
 
 FROM
     yearly_cohort
-ORDER BY 
-    customerkey
+ORDER BY
+    cohort_year,
+    purchase_year
