@@ -25,6 +25,12 @@ FROM
 
 SELECT 
     customerkey,
-    total_order
+    total_order,
+    AVG(order_value) AS net_revenue
 FROM
     customer_order
+GROUP BY
+    customerkey,
+    total_order
+ORDER BY
+    customerkey
