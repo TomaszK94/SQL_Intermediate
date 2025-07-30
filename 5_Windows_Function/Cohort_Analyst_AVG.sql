@@ -24,6 +24,13 @@ WITH yearly_cohort AS(
         customerkey
 )
 
-SELECT *
+SELECT
+    customerkey,
+    cohort_year,
+    customer_ltv,
+    AVG(customer_ltv) OVER (PARTITION BY cohort_year) AS avg_cohort_ltv
 FROM 
     yearly_cohort
+ORDER BY
+    cohort_year,
+    customerkey
