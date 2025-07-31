@@ -45,3 +45,17 @@ WHERE
     window_column_allias condition --> Filters data after window function
 
 */
+
+WITH cohort AS (    
+    SELECT
+        customerkey,
+        EXTRACT(YEAR FROM MIN(orderdate) OVER (PARTITION BY customerkey)) AS cohort_year
+    FROM 
+        sales
+)
+
+SELECT *
+FROM 
+    cohort
+WHERE 
+    cohort_year >= '2020'
