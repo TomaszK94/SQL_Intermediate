@@ -1,0 +1,15 @@
+/*
+ORDER BY
+ORDER BY: Orders rows within each partition for the function.
+ORDER BY can be ordered DESC or ASC 
+SYNTAX:
+
+SELECT
+    window_function() OVER(
+        PARTITION BY partition_expression
+        ORDER BY column_name -- DESC or ASC
+    ) AS window_column_allias
+FROM
+    table_name;
+
+*/
