@@ -13,3 +13,13 @@ FROM
     table_name;
 
 */
+
+SELECT
+    customerkey,
+    orderdate,
+    (quantity * netprice * exchangerate) AS net_revenue,
+    COUNT(*) OVER (
+        PARTITION BY customerkey
+    )
+FROM
+    sales
