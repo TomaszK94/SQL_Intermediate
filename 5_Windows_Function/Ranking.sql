@@ -21,6 +21,10 @@ SELECT
     COUNT(*) OVER (
         PARTITION BY customerkey
         ORDER BY orderdate
-    ) AS running_order_count
+    ) AS running_order_count,
+    AVG(quantity * netprice * exchangerate) OVER (
+        PARTITION BY customerkey
+        ORDER BY orderdate
+    ) AS running_avg_revenue
 FROM
     sales
