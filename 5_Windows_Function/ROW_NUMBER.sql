@@ -1,5 +1,7 @@
 SELECT 
     ROW_NUMBER() OVER(
+        PARTITION BY
+            orderdate
         ORDER BY
             orderdate,
             orderkey,
