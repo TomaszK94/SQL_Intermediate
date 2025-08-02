@@ -1,0 +1,5 @@
+SELECT *,
+    ROW_NUMBER() OVER()
+FROM
+    sales
+LIMIT 50;
