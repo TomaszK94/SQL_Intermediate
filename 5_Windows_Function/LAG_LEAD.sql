@@ -12,6 +12,8 @@ WITH monthly_revenue AS(
         month
 )
 
-SELECT *
+SELECT
+    *,
+    FIRST_VALUE(net_revenue) OVER(ORDER BY month)
 FROM 
     monthly_revenue
