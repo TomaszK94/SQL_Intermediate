@@ -64,6 +64,7 @@ WITH monthly_revenue AS(
 SELECT
     *,
     LAG(net_revenue) OVER(ORDER BY month) AS previous_month_revenue,
-    net_revenue - LAG(net_revenue) OVER(ORDER BY month) AS monthly_revenue_grow
+    net_revenue - LAG(net_revenue) OVER(ORDER BY month) AS monthly_revenue_grow,
+    100 * (net_revenue - LAG(net_revenue) OVER(ORDER BY month)) / LAG(net_revenue) OVER(ORDER BY month) AS percentage_monthly_revenue_grow
 FROM 
-    monthly_revenue
+    monthly_revenue;
