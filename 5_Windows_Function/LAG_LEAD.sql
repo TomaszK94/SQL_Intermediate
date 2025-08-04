@@ -38,6 +38,7 @@ WITH monthly_revenue AS(
 
 SELECT
     *,
-    LAG(net_revenue) OVER(ORDER BY month) AS previous_month_revenue
+    LAG(net_revenue) OVER(ORDER BY month) AS previous_month_revenue,
+    LEAD(net_revenue) OVER(ORDER BY month) AS next_month_revenue
 FROM 
     monthly_revenue
