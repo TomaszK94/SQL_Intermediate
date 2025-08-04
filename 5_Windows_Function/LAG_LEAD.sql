@@ -14,6 +14,7 @@ WITH monthly_revenue AS(
 
 SELECT
     *,
-    FIRST_VALUE(net_revenue) OVER(ORDER BY month)
+    FIRST_VALUE(net_revenue) OVER(ORDER BY month) AS first_month_revenue,
+    LAST_VALUE(net_revenue) OVER(ORDER BY month ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS last_month_revenue
 FROM 
     monthly_revenue
