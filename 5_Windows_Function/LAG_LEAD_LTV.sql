@@ -30,6 +30,7 @@ WITH yearly_cohort AS(
 
 SELECT
     *,
-    LAG(avg_cohort_ltv) OVER (ORDER BY cohort_year) AS previous_avg_cohort_ltv
+    LAG(avg_cohort_ltv) OVER (ORDER BY cohort_year) AS previous_avg_cohort_ltv,
+    100 * (avg_cohort_ltv - LAG(avg_cohort_ltv) OVER(ORDER BY cohort_year)) / LAG(avg_cohort_ltv) OVER(ORDER BY cohort_year) AS ltv_change
 FROM
-    cohort_final
+    cohort_final;
