@@ -18,12 +18,16 @@ WITH yearly_cohort AS(
     ORDER BY
         cohort_year,
         customerkey
+), cohort_final AS(
+    SELECT DISTINCT
+        cohort_year,
+        avg_cohort_ltv
+    FROM
+        cohort_sumary
+    ORDER BY
+        cohort_year
 )
 
-SELECT DISTINCT
-    cohort_year,
-    avg_cohort_ltv
+SELECT *
 FROM
-    cohort_sumary
-ORDER BY
-    cohort_year
+    cohort_final
