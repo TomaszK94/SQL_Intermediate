@@ -7,14 +7,23 @@ WITH yearly_cohort AS(
         sales
     GROUP BY
         customerkey
+), cohort_sumary AS (
+    SELECT
+        cohort_year,
+        customerkey,
+        customer_ltv,
+        AVG(customer_ltv) OVER(PARTITION BY cohort_year) AS avg_cohort_ltv
+    FROM
+        yearly_cohort
+    ORDER BY
+        cohort_year,
+        customerkey
 )
-SELECT
+
+SELECT DISTINCT
     cohort_year,
-    customerkey,
-    customer_ltv,
-    AVG(customer_ltv) OVER(PARTITION BY cohort_year) AS avg_cohort_ltv
+    avg_cohort_ltv
 FROM
-    yearly_cohort
+    cohort_sumary
 ORDER BY
-    cohort_year,
-    customerkey
+    cohort_year
