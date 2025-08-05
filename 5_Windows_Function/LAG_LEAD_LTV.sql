@@ -28,6 +28,8 @@ WITH yearly_cohort AS(
         cohort_year
 )
 
-SELECT *
+SELECT
+    *,
+    LAG(avg_cohort_ltv) OVER (ORDER BY cohort_year) AS previous_avg_cohort_ltv
 FROM
     cohort_final
