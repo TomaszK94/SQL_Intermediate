@@ -24,4 +24,8 @@ start_frame & end_frame :
 - N PRECEDING - N rows before current row
 - N FOLLOWING - N rows after current row
 
+------------------------------------------------------------------------------
+
+RANGE & GROUPS - less commonly used in practice, not supported by all database!
+
 */
