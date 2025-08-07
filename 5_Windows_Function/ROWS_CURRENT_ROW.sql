@@ -17,6 +17,7 @@ SELECT
     net_revenue,
     AVG(net_revenue) OVER (
         ORDER BY month
-    )
+        ROWS CURRENT ROW
+    ) AS net_revenue_current
 FROM
     monthly_sales
