@@ -12,6 +12,11 @@ WITH monthly_sales AS(
         month
 )
 
-SELECT *
+SELECT
+    month,
+    net_revenue,
+    AVG(net_revenue) OVER (
+        ORDER BY month
+    )
 FROM
     monthly_sales
