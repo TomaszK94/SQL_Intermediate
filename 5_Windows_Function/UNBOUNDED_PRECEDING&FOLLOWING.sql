@@ -18,6 +18,10 @@ SELECT
     AVG(net_revenue) OVER (
         ORDER BY month
         ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
-    ) AS net_revenue_all_month
+    ) AS net_revenue_all_month,
+    AVG(net_revenue) OVER (
+        ORDER BY month
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS net_revenue_all_before_and_current
 FROM
     monthly_sales
