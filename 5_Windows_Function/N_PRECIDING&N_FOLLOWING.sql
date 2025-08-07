@@ -52,6 +52,6 @@ SELECT
     AVG(net_revenue) OVER (
         ORDER BY month
         ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING
-    ) AS net_revenue_preceding_1
+    ) AS net_revenue_3_months
 FROM
     monthly_sales
