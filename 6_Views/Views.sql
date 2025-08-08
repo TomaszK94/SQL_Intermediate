@@ -16,3 +16,13 @@ FROM
     table_name
 
 */
+
+SELECT
+    orderdate,
+    SUM(netprice * quantity * exchangerate) AS total_revenue
+FROM
+    sales
+GROUP BY
+    orderdate
+ORDER BY
+    orderdate DESC
