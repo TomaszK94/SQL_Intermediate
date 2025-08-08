@@ -1,0 +1,8 @@
+/*
+Views:
+- Simplifies complex queries by stroing them as reusable, named objects.
+- Ensures consistency and readability when multiple queries rely on the same logic.
+- Enhances security by restricting access to specific rows/columns.
+- Improves maintainability by centralizing changes to the query logic.
+
+*/
