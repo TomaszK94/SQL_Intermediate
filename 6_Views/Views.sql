@@ -26,4 +26,9 @@ FROM
 GROUP BY
     orderdate
 ORDER BY
-    orderdate DESC
+    orderdate DESC;
+
+
+SELECT *
+FROM
+    daily_revenue
