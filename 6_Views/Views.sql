@@ -17,6 +17,7 @@ FROM
 
 */
 
+-- Create
 CREATE VIEW daily_revenue AS
 SELECT
     orderdate,
@@ -28,7 +29,11 @@ GROUP BY
 ORDER BY
     orderdate DESC;
 
-
+-- Query
 SELECT *
 FROM
     daily_revenue
+
+
+-- DELETE
+DROP VIEW daily_revenue
