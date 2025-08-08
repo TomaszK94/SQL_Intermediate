@@ -5,4 +5,14 @@ Views:
 - Enhances security by restricting access to specific rows/columns.
 - Improves maintainability by centralizing changes to the query logic.
 
+SYNTAX:
+
+CREATE VIEW view_name AS 
+SELECT
+    column1,
+    column2,
+    column3
+FROM 
+    table_name
+
 */
