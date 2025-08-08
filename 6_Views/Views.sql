@@ -17,6 +17,7 @@ FROM
 
 */
 
+CREATE VIEW daily_revenue AS
 SELECT
     orderdate,
     SUM(netprice * quantity * exchangerate) AS total_revenue
