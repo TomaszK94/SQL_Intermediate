@@ -54,3 +54,8 @@ GROUP BY
     cohort_year
 ORDER BY
     cohort_year DESC;
+
+
+-- DROP VIEW TO CREATE NEW ONE
+DROP VIEW 
+    cohort_analysis
