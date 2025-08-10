@@ -1,3 +1,5 @@
+-- Create Main View
+
 CREATE VIEW cohort_analysis AS 
     WITH customer_revenue AS(
         SELECT 
@@ -28,15 +30,21 @@ CREATE VIEW cohort_analysis AS
     FROM
         customer_revenue cr
 
+
 -- View Column Rename
+
 ALTER VIEW cohort_analysis RENAME COLUMN count to num_orders
 
+
 -- RENAME TEST
+
 SELECT *
 FROM
     cohort_analysis
 
--- TEST
+
+-- TEST View functions
+
 SELECT 
     cohort_year,
     SUM(total_net_revenue)
@@ -45,4 +53,4 @@ FROM
 GROUP BY
     cohort_year
 ORDER BY
-    cohort_year DESC
+    cohort_year DESC;
