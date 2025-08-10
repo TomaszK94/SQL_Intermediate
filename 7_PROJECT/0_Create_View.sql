@@ -27,3 +27,16 @@ CREATE VIEW cohort_analysis AS
         EXTRACT(YEAR FROM MIN(cr.orderdate) OVER(PARTITION BY cr.customerkey)) AS cohort_year
     FROM
         customer_revenue cr
+
+
+
+-- TEST
+SELECT 
+    cohort_year,
+    SUM(total_net_revenue)
+FROM 
+    cohort_analysis
+GROUP BY
+    cohort_year
+ORDER BY
+    cohort_year DESC
