@@ -28,7 +28,13 @@ CREATE VIEW cohort_analysis AS
     FROM
         customer_revenue cr
 
+-- View Column Rename
+ALTER VIEW cohort_analysis RENAME COLUMN count to num_orders
 
+-- RENAME TEST
+SELECT *
+FROM
+    cohort_analysis
 
 -- TEST
 SELECT 
