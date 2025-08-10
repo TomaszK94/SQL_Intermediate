@@ -23,6 +23,7 @@ WITH customer_revenue AS(
 
 SELECT 
     cr.*,
-    MIN(cr.orderdate) OVER(PARTITION BY cr.customerkey) AS first_purchase_date
+    MIN(cr.orderdate) OVER(PARTITION BY cr.customerkey) AS first_purchase_date,
+    EXTRACT(YEAR FROM MIN(cr.orderdate) OVER(PARTITION BY cr.customerkey)) AS cohort_year
 FROM
     customer_revenue cr
