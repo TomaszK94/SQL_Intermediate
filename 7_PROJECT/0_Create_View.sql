@@ -21,6 +21,8 @@ WITH customer_revenue AS(
         c.surname
 )
 
-SELECT *
+SELECT 
+    cr.*,
+    MIN(cr.orderdate) OVER(PARTITION BY cr.customerkey) AS first_purchase_date
 FROM
-    customer_revenue
+    customer_revenue cr
