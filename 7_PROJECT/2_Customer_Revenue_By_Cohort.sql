@@ -11,10 +11,21 @@ GROUP BY
 
 -- 
 
+WITH purchase_days AS(
+    SELECT
+        customerkey,
+        total_net_revenue,
+        orderdate - MIN(orderdate) OVER (PARTITION BY customerkey) AS days_since_first_purchase
+    FROM
+        cohort_analysis
+)
 
 SELECT
-    customerkey,
-    total_net_revenue,
-    orderdate - MIN(orderdate) OVER (PARTITION BY customerkey) AS days_since_first_purchase
+    days_since_first_purchase,
+    SUM(total_net_revenue) AS total_revenue
 FROM
-    cohort_analysis
+    purchase_days
+GROUP BY
+    days_since_first_purchase
+ORDER BY
+    days_since_first_purchase
