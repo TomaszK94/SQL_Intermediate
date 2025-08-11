@@ -22,7 +22,8 @@ WITH purchase_days AS(
 
 SELECT
     days_since_first_purchase,
-    SUM(total_net_revenue) AS total_revenue
+    SUM(total_net_revenue) AS total_revenue,
+    SUM(total_net_revenue) / (SELECT SUM(total_net_revenue) FROM cohort_analysis) * 100 AS percentage_of_total
 FROM
     purchase_days
 GROUP BY
