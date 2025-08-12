@@ -13,3 +13,12 @@ Used to replace NULL values with a default. Common in reporting and data cleanin
  such as filtering missing values with a placeholder.
 
 */
+
+
+
+
+
+/*
+NULLIF()
+
+Returns NULL if two expressions are equal; otherwise, return the first expression.
