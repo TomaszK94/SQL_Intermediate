@@ -22,3 +22,11 @@ Used to replace NULL values with a default. Common in reporting and data cleanin
 NULLIF()
 
 Returns NULL if two expressions are equal; otherwise, return the first expression.
+
+SYNTAX:
+
+SELECT
+    NULLIF(expression1, expression2);
+
+Helps prevent division by zero by returning null instead of causing an error.
+*/
