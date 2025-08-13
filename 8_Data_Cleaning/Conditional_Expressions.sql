@@ -33,12 +33,17 @@ Used to replace NULL values with a default. Common in reporting and data cleanin
 
 SELECT
     job_title,
-    COALESCE(is_real_job, 'no'),
+    COALESCE(is_real_job, 'no') AS is_real_job,
     salary
 FROM
-    data_jobs
+    data_jobs;
 
-
+SELECT
+    job_title,
+    COALESCE(is_real_job, 'no') AS is_real_job,
+    COALESCE(salary::TEXT, job_title) AS salary
+FROM
+    data_jobs;
 
 /*
 NULLIF()
