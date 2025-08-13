@@ -45,6 +45,7 @@ SELECT
 FROM
     data_jobs;
 
+
 /*
 NULLIF()
 
@@ -57,3 +58,10 @@ SELECT
 
 Helps prevent division by zero by returning null instead of causing an error.
 */
+
+SELECT
+    job_title,
+    NULLIF(is_real_job, 'kinda') AS is_real_job,
+    salary
+FROM
+    data_jobs;
