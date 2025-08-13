@@ -1,3 +1,11 @@
+CREATE TABLE data_jobs (
+    id INT,
+    job_title VARCHAR(30),
+    is_real_job VARCHAR(10),
+    salary INT
+);
+
+
 /*
 COALESCE()
 
