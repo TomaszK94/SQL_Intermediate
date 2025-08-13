@@ -89,7 +89,8 @@ WITH sales_data AS(
 
 SELECT 
     c.customerkey,
-    net_revenue
+    s.net_revenue,
+    COALESCE(s.net_revenue, 0) AS correct_net_revenue
 FROM
     customer c
 LEFT JOIN sales_data s
