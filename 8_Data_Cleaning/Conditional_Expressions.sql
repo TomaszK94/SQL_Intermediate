@@ -90,7 +90,9 @@ WITH sales_data AS(
 SELECT 
     c.customerkey,
     s.net_revenue,
-    COALESCE(s.net_revenue, 0) AS correct_net_revenue
+    COALESCE(s.net_revenue, 0) AS correct_net_revenue,
+    AVG(s.net_revenue) OVER() AS Null_AVG,
+    AVG(COALESCE(s.net_revenue, 0)) OVER() AS Zero_AVG
 FROM
     customer c
 LEFT JOIN sales_data s
