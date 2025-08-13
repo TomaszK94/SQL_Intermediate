@@ -5,6 +5,15 @@ CREATE TABLE data_jobs (
     salary INT
 );
 
+INSERT INTO data_jobs VALUES
+(1, 'Data Analyst', 'yes', NULL),
+(2, 'Data Scientist', NULL, 140000),
+(3, 'Data Engineer', 'kinda', 120000);
+
+
+SELECT *
+FROM 
+    data_jobs;
 
 /*
 COALESCE()
