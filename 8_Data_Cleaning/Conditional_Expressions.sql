@@ -65,3 +65,11 @@ SELECT
     salary
 FROM
     data_jobs;
+
+
+SELECT
+    job_title,
+    NULLIF(is_real_job, salary::TEXT) AS is_real_job,  -- Do nothing not match
+    salary
+FROM
+    data_jobs;
