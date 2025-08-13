@@ -31,7 +31,12 @@ Used to replace NULL values with a default. Common in reporting and data cleanin
 
 */
 
-
+SELECT
+    job_title,
+    COALESCE(is_real_job, 'no'),
+    salary
+FROM
+    data_jobs
 
 
 
