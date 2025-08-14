@@ -8,3 +8,7 @@ SELECT
 
 SELECT 
     TRIM('    JAN     KOWALSKI    ')
+
+
+SELECT
+    TRIM(BOTH '#' FROM '### JAN  KOWALSKI ####')
