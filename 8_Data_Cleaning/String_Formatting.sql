@@ -52,3 +52,7 @@ CREATE VIEW cohort_analysis AS
     FROM
         customer_revenue cr
 
+
+SELECT *
+FROM 
+    cohort_analysis
