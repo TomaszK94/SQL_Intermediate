@@ -5,7 +5,7 @@ CREATE VIEW cohort_analysis AS
         SELECT 
             s.customerkey,
             s.orderdate,
-            SUM(s.exchangerate * s.quantity * s.netprice) AS total_net_revenue,
+            SUM(s.quantity * s.netprice / s.exchangerate ) AS total_net_revenue,
             COUNT(s.orderkey),
             c.countryfull,
             c.age,
@@ -67,7 +67,7 @@ CREATE VIEW cohort_analysis AS
         SELECT 
             s.customerkey,
             s.orderdate,
-            SUM(s.exchangerate * s.quantity * s.netprice) AS total_net_revenue,
+            SUM(s.quantity * s.netprice / s.exchangerate) AS total_net_revenue,
             COUNT(s.orderkey) AS num_orders,
             c.countryfull,
             c.age,
