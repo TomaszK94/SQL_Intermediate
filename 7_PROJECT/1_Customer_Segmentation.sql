@@ -28,3 +28,7 @@ SELECT
 FROM
     customer_ltv c,
     customer_segments cs
+ORDER BY
+    customer_segment DESC,
+    total_ltv DESC,
+    customerkey
