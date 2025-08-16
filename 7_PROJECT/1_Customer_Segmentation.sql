@@ -19,6 +19,12 @@ WITH customer_ltv AS (
 )
 
 SELECT
-    c.*
+    c.*,
+    CASE
+        WHEN c.total_ltv < cs.ltv_25th_percentile THEN '1 - LOW-VALUE'
+        WHEN c.total_ltv BETWEEN cs.ltv_25th_percentile AND cs.ltv_75th_percentile  THEN '2 - MID-VALUE'
+        ELSE '3 - HIGH-VALUE'
+        END AS customer_segment
 FROM
-    customer_ltv c
+    customer_ltv c,
+    customer_segments cs
