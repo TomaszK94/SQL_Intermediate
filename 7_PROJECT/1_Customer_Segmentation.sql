@@ -10,10 +10,15 @@ WITH customer_ltv AS (
         cleaned_name
     ORDER BY   
         customerkey
+), customer_segments AS (
+    SELECT 
+        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY total_ltv) AS ltv_25th_percentile,
+        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY total_ltv) AS ltv_75th_percentile
+    FROM
+        customer_ltv
 )
 
-SELECT 
-    PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY total_ltv) AS ltv_25th_percentile,
-    PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY total_ltv) AS ltv_75th_percentile
+SELECT
+    c.*
 FROM
-    customer_ltv
+    customer_ltv c
