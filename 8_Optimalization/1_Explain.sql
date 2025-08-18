@@ -19,5 +19,10 @@ SELECT
     column
 FROM
     table;
-    
+
 */
+
+EXPLAIN
+SELECT *
+FROM
+    sales
