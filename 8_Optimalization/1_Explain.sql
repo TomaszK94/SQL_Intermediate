@@ -32,3 +32,13 @@ EXPLAIN ANALYZE
 SELECT *
 FROM
     sales
+
+
+/*
+
+Seq Scan - PostgreSQL is doing a sequential scan (no index used).
+cost - An arbitary unit for cost (... basically made up units specific to PostgreSQL).
+rows - Estimated number of rows
+width - Estimated row size in bytes.
+
+*/ 
