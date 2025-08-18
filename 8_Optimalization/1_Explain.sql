@@ -9,4 +9,15 @@ SELECT
 FROM 
     table;
 
+
+Explain Analyze: Execute the query and provides actual execution times, row estimates, and other runtime details.
+
+SYNTAX:
+
+EXPLAIN ANALYZE 
+SELECT
+    column
+FROM
+    table;
+    
 */
