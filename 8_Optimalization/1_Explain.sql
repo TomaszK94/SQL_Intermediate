@@ -42,3 +42,13 @@ rows - Estimated number of rows
 width - Estimated row size in bytes.
 
 */ 
+
+
+EXPLAIN ANALYZE
+SELECT 
+    customerkey,
+    SUM(quantity * netprice / exchangerate) AS net_revenue
+FROM
+    sales
+GROUP BY 
+    customerkey
