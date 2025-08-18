@@ -26,3 +26,9 @@ EXPLAIN
 SELECT *
 FROM
     sales
+
+
+EXPLAIN ANALYZE
+SELECT *
+FROM
+    sales
