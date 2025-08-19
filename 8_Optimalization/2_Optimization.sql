@@ -10,5 +10,6 @@ QUERY STRUCTURE AND EXECUTION PLAN OPTIMIZATIONS
 - Use Query Execution Plans - Identify slow queries and optimize execution paths.
 - Minimize GROUP BY Usage - Avoid unnecessary aggregations.
 - Reduce JOINS when possible - Optimize relationships to prevent expensive joins.
+- Optimize ORDER BY - Use indexed columns for sorting.
 
 */
