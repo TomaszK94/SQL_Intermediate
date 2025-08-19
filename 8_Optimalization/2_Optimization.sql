@@ -8,6 +8,7 @@ FUNDAMENTAL OPTIMIZATIONS:
 
 QUERY STRUCTURE AND EXECUTION PLAN OPTIMIZATIONS
 - Use Query Execution Plans - Identify slow queries and optimize execution paths.
+- Minimize GROUP BY Usage - Avoid unnecessary aggregations.
 
 
 */
