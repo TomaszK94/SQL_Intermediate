@@ -1,3 +1,4 @@
+-- NOT OPTIMIZE QUERY
 EXPLAIN ANALYZE
     WITH customer_revenue AS(
         SELECT 
