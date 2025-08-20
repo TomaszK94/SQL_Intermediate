@@ -25,4 +25,6 @@ as this allows the database to eliminate more rows early in the sorting process)
 Database - Level Optimizations:
 - Use Proper Data Types - Ensure numeric vs string-based filtering is efficient.
 - Use Proper Indexing - Speed up queries with strategic indexes.
+- Use Partitioning for Large Tables - Improve performance on large datasets.
+
 */
