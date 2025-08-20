@@ -28,6 +28,8 @@ EXPLAIN ANALYZE
     FROM
         customer_revenue cr
 
+
+
 -- OPTIMIZE QUERY 
 EXPLAIN ANALYZE
     WITH customer_revenue AS(
