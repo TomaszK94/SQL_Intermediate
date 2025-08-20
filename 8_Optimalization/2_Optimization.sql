@@ -6,6 +6,7 @@ FUNDAMENTAL OPTIMIZATIONS:
 - Use WHERE instead of HAVING - Filter before aggregation for efficiency.
 
 
+
 QUERY STRUCTURE AND EXECUTION PLAN OPTIMIZATIONS
 - Use Query Execution Plans - Identify slow queries and optimize execution paths.
 - Minimize GROUP BY Usage - Avoid unnecessary aggregations.
@@ -19,4 +20,8 @@ OPTIMIZE ORDER BY:
 as this allows the database to eliminate more rows early in the sorting process)
 - Use indexed columns for sorting to leverage existing database indexes.
 
+
+
+Database - Level Optimizations:
+- Use Proper Data Types - Ensure numeric vs string-based filtering is efficient.
 */
