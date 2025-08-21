@@ -12,3 +12,5 @@ WITH customer_last_purchase AS(
 SELECT *
 FROM
     customer_last_purchase
+WHERE
+    rn = 1
