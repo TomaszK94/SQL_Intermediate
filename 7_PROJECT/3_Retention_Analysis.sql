@@ -12,7 +12,11 @@ WITH customer_last_purchase AS(
 SELECT 
     customerkey,
     cleaned_name,
-    orderdate AS last_purchase_date
+    orderdate AS last_purchase_date,
+    CASE
+        WHEN orderdate < '2024-04-20'::DATE - INTERVAL '6 months' THEN 'Churned'
+        ELSE 'Active' 
+        END AS customer_status 
 FROM
     customer_last_purchase
 WHERE
