@@ -14,15 +14,14 @@ SELECT
     cleaned_name,
     orderdate AS last_purchase_date,
     CASE
-        WHEN orderdate < '2024-04-20'::DATE - INTERVAL '6 months' THEN 'Churned'
+        WHEN orderdate < (SELECT MAX(orderdate) FROM sales) - INTERVAL '6 months' THEN 'Churned'
         ELSE 'Active' 
         END AS customer_status 
 FROM
     customer_last_purchase
 WHERE
     rn = 1 AND
-    first_purchase_date < '2024-04-20'::DATE - INTERVAL '6 months'
-
+    first_purchase_date < (SELECT MAX(orderdate) FROM sales) - INTERVAL '6 months'
 
 
 
