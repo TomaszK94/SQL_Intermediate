@@ -12,7 +12,6 @@ WITH customer_last_purchase AS(
 SELECT 
     customerkey,
     cleaned_name,
-    first_purchase_date,
     orderdate AS last_purchase_date,
     CASE
         WHEN orderdate < '2024-04-20'::DATE - INTERVAL '6 months' THEN 'Churned'
@@ -23,8 +22,9 @@ FROM
 WHERE
     rn = 1 AND
     first_purchase_date < '2024-04-20'::DATE - INTERVAL '6 months'
-ORDER BY
-    first_purchase_date DESC
+
+
+
 
 -- Checking last active database orderdate
 SELECT
