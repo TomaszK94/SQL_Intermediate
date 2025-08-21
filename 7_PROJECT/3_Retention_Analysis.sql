@@ -20,7 +20,8 @@ SELECT
 FROM
     customer_last_purchase
 WHERE
-    rn = 1
+    rn = 1 AND
+    first_purchase_date < '2024-04-20'::DATE - INTERVAL '6 months'
 
 
 -- Checking last active database orderdate
