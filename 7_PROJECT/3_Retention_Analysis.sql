@@ -12,8 +12,15 @@ WITH customer_last_purchase AS(
 SELECT 
     customerkey,
     cleaned_name,
-    orderdate
+    orderdate AS last_purchase_date
 FROM
     customer_last_purchase
 WHERE
     rn = 1
+
+
+-- Checking last active database orderdate
+SELECT
+    MAX(orderdate)
+FROM
+    sales
