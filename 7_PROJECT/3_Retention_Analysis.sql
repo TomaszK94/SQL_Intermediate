@@ -9,7 +9,10 @@ WITH customer_last_purchase AS(
         cohort_analysis
 )
 
-SELECT *
+SELECT 
+    customerkey,
+    cleaned_name,
+    orderdate
 FROM
     customer_last_purchase
 WHERE
