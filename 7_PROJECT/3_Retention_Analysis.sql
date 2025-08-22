@@ -62,7 +62,8 @@ WHERE
 
 SELECT 
     customer_status,
-    COUNT(customerkey)
+    COUNT(customerkey),
+    SUM(COUNT(customerkey)) OVER () AS total_customers
 FROM
     churned_customers
 GROUP BY 
