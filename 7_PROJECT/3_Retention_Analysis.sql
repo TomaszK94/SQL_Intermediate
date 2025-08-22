@@ -60,6 +60,10 @@ WHERE
     first_purchase_date < (SELECT MAX(orderdate) FROM sales) - INTERVAL '6 months'
 )
 
-SELECT *
+SELECT 
+    customer_status,
+    COUNT(customerkey)
 FROM
     churned_customers
+GROUP BY 
+    customer_status
