@@ -63,7 +63,8 @@ WHERE
 SELECT 
     customer_status,
     COUNT(customerkey),
-    SUM(COUNT(customerkey)) OVER () AS total_customers
+    SUM(COUNT(customerkey)) OVER () AS total_customers,
+    COUNT(customerkey) / SUM(COUNT(customerkey)) OVER() * 100 AS percentage_customers
 FROM
     churned_customers
 GROUP BY 
