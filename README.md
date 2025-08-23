@@ -9,3 +9,5 @@
 ### 2. Customer Revenue by Cohort
 
 ### 3. Customer Retention
+
+## Strategic Recommendations
