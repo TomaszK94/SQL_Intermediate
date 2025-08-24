@@ -2,6 +2,9 @@
 ## Overview
 ## Business Questions
 ## Clean Up Data
+
+**Query:** [Create View](7_PROJECT/0_Create_View.sql)
+
 ## Analysis
 
 ### 1. Customer Segmentation
