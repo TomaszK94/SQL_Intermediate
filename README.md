@@ -17,6 +17,8 @@
 
 ### 3. Customer Retention
 
+**Query:** [Retention Analysis](7_PROJECT/3_Retention_Analysis.sql)
+
 ## Strategic Recommendations
 
 ## Technical Details
