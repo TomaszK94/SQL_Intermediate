@@ -9,6 +9,8 @@
 
 ### 1. Customer Segmentation
 
+**Query:** [Customer Segmentation](7_PROJECT/1_Customer_Segmentation.sql)
+
 ### 2. Customer Revenue by Cohort
 
 ### 3. Customer Retention
