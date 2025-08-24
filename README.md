@@ -13,6 +13,8 @@
 
 ### 2. Customer Revenue by Cohort
 
+**Query:** [Cohort Analysis](7_PROJECT/2_Customer_Revenue_By_Cohort.sql)
+
 ### 3. Customer Retention
 
 ## Strategic Recommendations
