@@ -1,7 +1,7 @@
 SELECT 
     s.orderdate,
-    s.quantity * s.netprice * s.exchangerate AS net_revenue,
-    CASE WHEN s.quantity * s.netprice * s.exchangerate >= 1000 THEN 'HIGH' ELSE 'LOW' END AS revenue_rank,
+    s.quantity * s.netprice / s.exchangerate AS net_revenue,
+    CASE WHEN s.quantity * s.netprice / s.exchangerate >= 1000 THEN 'HIGH' ELSE 'LOW' END AS revenue_rank,
     c.givenname,
     c.surname,
     c.countryfull,
