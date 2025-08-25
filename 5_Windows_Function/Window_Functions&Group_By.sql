@@ -1,6 +1,6 @@
 SELECT
     customerkey,
-    AVG(quantity * netprice * exchangerate) AS net_revenue,
+    AVG(quantity * netprice / exchangerate) AS net_revenue,
     COUNT(*) OVER (PARTITION BY customerkey) AS total_order
 FROM
     sales
@@ -17,7 +17,7 @@ BETTER USE CTE FIRST TO APPLY WINDOW FUNCTION THEN PERFORM GROUP BY
 WITH customer_order AS(
 SELECT
     customerkey,
-    (quantity * netprice * exchangerate) AS order_value,
+    (quantity * netprice / exchangerate) AS order_value,
     COUNT(*) OVER (PARTITION BY customerkey) AS total_order
 FROM
     sales

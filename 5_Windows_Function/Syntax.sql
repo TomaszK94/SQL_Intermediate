@@ -19,8 +19,8 @@ SELECT
     customerkey,
     orderkey,
     linenumber,
-    (quantity * netprice * exchangerate) AS net_revenue,
-    AVG(quantity * netprice * exchangerate) OVER() AS avg_net_revenue_all_orders
+    (quantity * netprice / exchangerate) AS net_revenue,
+    AVG(quantity * netprice / exchangerate) OVER() AS avg_net_revenue_all_orders
 FROM
     sales
 ORDER BY
@@ -33,8 +33,8 @@ SELECT
     customerkey,
     orderkey,
     linenumber,
-    (quantity * netprice * exchangerate) AS net_revenue,
-    AVG(quantity * netprice * exchangerate) OVER(PARTITION BY orderkey) AS avg_net_revenue_all_orders
+    (quantity * netprice / exchangerate) AS net_revenue,
+    AVG(quantity * netprice / exchangerate) OVER(PARTITION BY orderkey) AS avg_net_revenue_all_orders
 FROM
     sales
 ORDER BY
@@ -48,15 +48,15 @@ LIMIT 20;
 SELECT
     customerkey,
     orderdate,
-    (quantity * netprice * exchangerate) AS net_revenue,
+    (quantity * netprice / exchangerate) AS net_revenue,
     ROW_NUMBER() OVER (
         PARTITION BY customerkey 
-        ORDER BY (quantity * netprice * exchangerate) DESC
+        ORDER BY (quantity * netprice / exchangerate) DESC
         ) AS order_rank,
-    SUM(quantity * netprice * exchangerate) OVER(
+    SUM(quantity * netprice / exchangerate) OVER(
         PARTITION BY customerkey
     ) AS customer_total,
-    (quantity * netprice * exchangerate) / SUM(quantity * netprice * exchangerate) OVER (PARTITION BY customerkey) * 100 AS percent_of_total
+    (quantity * netprice / exchangerate) / SUM(quantity * netprice / exchangerate) OVER (PARTITION BY customerkey) * 100 AS percent_of_total
 FROM
     sales
 ORDER BY

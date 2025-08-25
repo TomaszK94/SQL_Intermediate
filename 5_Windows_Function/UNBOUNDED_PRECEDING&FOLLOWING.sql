@@ -1,7 +1,7 @@
 WITH monthly_sales AS( 
     SELECT
         TO_CHAR(orderdate, 'YYYY-MM') AS month,
-        SUM(quantity * netprice * exchangerate) AS net_revenue
+        SUM(quantity * netprice / exchangerate) AS net_revenue
     FROM
         sales
     WHERE
@@ -32,7 +32,7 @@ FROM
 WITH monthly_sales AS(
     SELECT 
         TO_CHAR(orderdate, 'YYYY-MM') AS month,
-        SUM(exchangerate * quantity * netprice) AS net_revenue
+        SUM(quantity * netprice / exchangerate) AS net_revenue
     FROM
         sales
     WHERE
