@@ -1,14 +1,14 @@
 SELECT
     product.categoryname,
-    AVG(sales.quantity * sales.netprice * sales.exchangerate) AS avg_revenue,
-    AVG(CASE WHEN sales.orderdate BETWEEN '2022-01-01' AND '2022-12-31' THEN (sales.quantity * sales.netprice * sales.exchangerate) END) AS avg_revenue_2022,
-    AVG(CASE WHEN sales.orderdate BETWEEN '2023-01-01' AND '2023-12-31' THEN (sales.quantity * sales.netprice * sales.exchangerate) END) AS avg_revenue_2023,
-    MIN(sales.quantity * sales.netprice * sales.exchangerate) AS min_revenue,
-    MIN(CASE WHEN sales.orderdate BETWEEN '2022-01-01' AND '2022-12-31' THEN (sales.quantity * sales.netprice * sales.exchangerate) END) AS min_revenue_2022,
-    MIN(CASE WHEN sales.orderdate BETWEEN '2023-01-01' AND '2023-12-31' THEN (sales.quantity * sales.netprice * sales.exchangerate) END) AS min_revenue_2023,
-    MAX(sales.quantity * sales.netprice * sales.exchangerate) AS max_revenue,
-    MAX(CASE WHEN sales.orderdate BETWEEN '2022-01-01' AND '2022-12-31' THEN (sales.quantity * sales.netprice * sales.exchangerate) END) AS max_revenue_2022,
-    MAX(CASE WHEN sales.orderdate BETWEEN '2023-01-01' AND '2023-12-31' THEN (sales.quantity * sales.netprice * sales.exchangerate) END) AS max_revenue_2023
+    AVG(sales.quantity * sales.netprice / sales.exchangerate) AS avg_revenue,
+    AVG(CASE WHEN sales.orderdate BETWEEN '2022-01-01' AND '2022-12-31' THEN (sales.quantity * sales.netprice / sales.exchangerate) END) AS avg_revenue_2022,
+    AVG(CASE WHEN sales.orderdate BETWEEN '2023-01-01' AND '2023-12-31' THEN (sales.quantity * sales.netprice / sales.exchangerate) END) AS avg_revenue_2023,
+    MIN(sales.quantity * sales.netprice / sales.exchangerate) AS min_revenue,
+    MIN(CASE WHEN sales.orderdate BETWEEN '2022-01-01' AND '2022-12-31' THEN (sales.quantity * sales.netprice / sales.exchangerate) END) AS min_revenue_2022,
+    MIN(CASE WHEN sales.orderdate BETWEEN '2023-01-01' AND '2023-12-31' THEN (sales.quantity * sales.netprice / sales.exchangerate) END) AS min_revenue_2023,
+    MAX(sales.quantity * sales.netprice / sales.exchangerate) AS max_revenue,
+    MAX(CASE WHEN sales.orderdate BETWEEN '2022-01-01' AND '2022-12-31' THEN (sales.quantity * sales.netprice / sales.exchangerate) END) AS max_revenue_2022,
+    MAX(CASE WHEN sales.orderdate BETWEEN '2023-01-01' AND '2023-12-31' THEN (sales.quantity * sales.netprice / sales.exchangerate) END) AS max_revenue_2023
 FROM
     sales
 LEFT JOIN product ON sales.productkey = product.productkey
