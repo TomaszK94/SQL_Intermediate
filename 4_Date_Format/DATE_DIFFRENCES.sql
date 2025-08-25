@@ -15,7 +15,7 @@ SELECT
     CURRENT_DATE,
     s.orderdate,
     p.categoryname,
-    SUM(s.quantity * s.netprice * s.exchangerate) AS net_revenue
+    SUM(s.quantity * s.netprice / s.exchangerate) AS net_revenue
 FROM
     sales AS s
 LEFT JOIN product AS p ON s.productkey = p.productkey

@@ -23,7 +23,7 @@ LIMIT 10;
 SELECT 
     EXTRACT(YEAR FROM orderdate) AS order_year,
     EXTRACT(MONTH FROM orderdate) AS order_month,
-    SUM(netprice * quantity * exchangerate) AS net_revenue,
+    SUM(netprice * quantity / exchangerate) AS net_revenue,
     COUNT(DISTINCT customerkey) AS unique_customers
 FROM
     sales

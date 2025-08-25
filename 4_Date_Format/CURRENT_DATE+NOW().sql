@@ -14,7 +14,7 @@ SELECT
     EXTRACT(YEAR FROM CURRENT_DATE) - 5 AS five_years,
     sales.orderdate,
     product.categoryname,
-    SUM(sales.quantity * sales.netprice * sales.exchangerate) AS net_revenue
+    SUM(sales.quantity * sales.netprice / sales.exchangerate) AS net_revenue
 FROM
     sales
 LEFT JOIN 
@@ -33,7 +33,7 @@ ORDER BY
 SELECT
     sales.orderdate,
     product.categoryname,
-    SUM(sales.quantity * sales.netprice * sales.exchangerate) AS net_revenue
+    SUM(sales.quantity * sales.netprice / sales.exchangerate) AS net_revenue
 FROM
     sales
 LEFT JOIN 
