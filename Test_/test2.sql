@@ -1,6 +1,6 @@
 SELECT 
     s.orderdate,
-    s.quantity * s.netprice * s.exchangerate AS net_revenue,
+    s.quantity * s.netprice / s.exchangerate AS net_revenue,
     c.givenname,
     c.surname,
     c.countryfull,
