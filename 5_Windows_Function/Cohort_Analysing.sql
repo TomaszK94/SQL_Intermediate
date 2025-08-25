@@ -29,7 +29,7 @@ FROM
 SELECT
     y.cohort_year,
     EXTRACT(YEAR FROM s.orderdate) AS purchase_year,
-    SUM(s.quantity * s.netprice * s.exchangerate) AS net_revenue
+    SUM(s.quantity * s.netprice / s.exchangerate) AS net_revenue
 FROM
     sales s
 LEFT JOIN yearly_cohort y ON s.customerkey = y.customerkey
