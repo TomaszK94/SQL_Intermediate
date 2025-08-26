@@ -127,6 +127,18 @@ ORDER BY
 
 **Query:** [Cohort Analysis](7_PROJECT/2_Customer_Revenue_By_Cohort.sql)
 
+``` SQL
+SELECT
+    cohort_year,
+    COUNT(DISTINCT customerkey) AS total_customers,
+    SUM(total_net_revenue) AS total_revenue,
+    SUM(total_net_revenue) / COUNT(DISTINCT customerkey) AS customer_revenue
+FROM
+    cohort_analysis
+GROUP BY
+    cohort_year;
+```
+
 ### 3. Customer Retention
 
 **Query:** [Retention Analysis](7_PROJECT/3_Retention_Analysis.sql)
