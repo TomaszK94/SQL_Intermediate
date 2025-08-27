@@ -50,6 +50,10 @@ CREATE VIEW cohort_analysis AS
 
 ### 1. Customer Segmentation
 
+- Segmented customers by total lifetime value (LTV)
+- Classified customers into High-, Mid-, and Low-value groups
+- Computed key performance metrics, including total revenue
+
 **Query:** [Customer Segmentation](7_PROJECT/1_Customer_Segmentation.sql)
 
 ``` SQL
