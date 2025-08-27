@@ -13,6 +13,10 @@ Analyzing customer behavior, retention patterns, and lifetime value in an e-comm
 
 ## Clean Up Data
 
+- Consolidated sales and customer data into revenue metrics
+- Identified first purchase dates to enable cohort analysis
+- Developed a unified view combining transactions with customer details
+
 **Query:** [Create View](7_PROJECT/0_Create_View.sql)
 
 ``` SQL
