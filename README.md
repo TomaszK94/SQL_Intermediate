@@ -4,6 +4,13 @@
 Analyzing customer behavior, retention patterns, and lifetime value in an e-commerce business to enhance customer loyalty and maximize revenue growth.
 
 ## Business Questions
+
+1. `Customer Segmentation:` Identifying our highest-value customer segments.
+
+2. `Cohort Analysis:` Evaluating revenue contributions across different customer groups.
+
+3. `Retention Analysis:` Determining which customers have become inactive or lapsed.
+
 ## Clean Up Data
 
 **Query:** [Create View](7_PROJECT/0_Create_View.sql)
