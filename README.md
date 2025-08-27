@@ -1,5 +1,8 @@
 # Sales Analysis
 ## Overview
+
+Analyzing customer behavior, retention patterns, and lifetime value in an e-commerce business to enhance customer loyalty and maximize revenue growth.
+
 ## Business Questions
 ## Clean Up Data
 
