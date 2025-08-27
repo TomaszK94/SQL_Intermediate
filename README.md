@@ -163,6 +163,10 @@ GROUP BY
 
 ### 3. Customer Retention
 
+- Detected customers at risk of churn
+- Examined patterns in recent purchase behavior
+- Calculated customer-level performance metrics
+
 **Query:** [Retention Analysis](7_PROJECT/3_Retention_Analysis.sql)
 
 ``` SQL
