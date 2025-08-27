@@ -143,6 +143,10 @@ ORDER BY
 
 ### 2. Customer Revenue by Cohort
 
+- Monitored revenue and customer counts across cohorts
+- Grouped cohorts by the year of first purchase
+- Examined revenue trends at the cohort level
+
 **Query:** [Cohort Analysis](7_PROJECT/2_Customer_Revenue_By_Cohort.sql)
 
 ``` SQL
