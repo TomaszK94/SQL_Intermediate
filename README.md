@@ -92,6 +92,20 @@ ORDER BY
     total_ltv DESC,
     customerkey
 ```
+
+| Customerkey  | Cleaned Name      | Total LTV | Customer segment |
+|--------------|-------------------|-----------|------------------|
+| 552225       | Janina Unger      | 68448$    | 3 - HIGH-VALUE   |
+| 17743963     | Patricia Dalton   | 65432$    | 3 - HIGH-VALUE   |
+| 1151535      | Dylan Brennan     | 63399$    | 3 - HIGH-VALUE   |
+| ...          | ...               | ...       |   ...            |
+| 390134       | Edward Stjohn     | 5576$     | 2 - MID-VALUE    |
+| 1357959      | Marianne Sweeney  | 5576$     | 2 - MID-VALUE    |
+| ...          | ...               | ...       |  ...             |
+| 55123        | Lachlan Chipper   | 836$      | 1 - LOW-VALUE    |
+| 126130       | Zachary Melbourne | 836$      | 1 - LOW-VALUE    |
+| ...          | ...               |  ...      |   ...            |
+
 ``` SQL
 -- Statistics
 WITH customer_ltv AS (
