@@ -95,12 +95,12 @@ ORDER BY
 
 | Customerkey  | Cleaned Name      | Total LTV | Customer segment |
 |--------------|-------------------|-----------|------------------|
-| 552225       | Janina Unger      | 68448$    | 3 - HIGH-VALUE   |
-| 17743963     | Patricia Dalton   | 65432$    | 3 - HIGH-VALUE   |
-| 1151535      | Dylan Brennan     | 63399$    | 3 - HIGH-VALUE   |
+| 552225       | Janina Unger      | 68 448$   | 3 - HIGH-VALUE   |
+| 17743963     | Patricia Dalton   | 65 432$   | 3 - HIGH-VALUE   |
+| 1151535      | Dylan Brennan     | 63 399$   | 3 - HIGH-VALUE   |
 | ...          | ...               | ...       |   ...            |
-| 390134       | Edward Stjohn     | 5576$     | 2 - MID-VALUE    |
-| 1357959      | Marianne Sweeney  | 5576$     | 2 - MID-VALUE    |
+| 390134       | Edward Stjohn     | 5 576$    | 2 - MID-VALUE    |
+| 1357959      | Marianne Sweeney  | 5 576$    | 2 - MID-VALUE    |
 | ...          | ...               | ...       |  ...             |
 | 55123        | Lachlan Chipper   | 836$      | 1 - LOW-VALUE    |
 | 126130       | Zachary Melbourne | 836$      | 1 - LOW-VALUE    |
@@ -154,6 +154,12 @@ GROUP BY
 ORDER BY
     customer_segment
 ```
+
+| Customer segment | Total Revenue by segment | Customer Count | AVG LTV |
+|------------------|--------------------------|----------------|---------|
+| 1 - LOW-VALUE    | 4 298 367$               | 12372          | 347$    |
+| 2 - MID-VALUE    | 66 367 810$              | 24743          | 2 682$  |
+| 3 - HIGH-VALUE   | 135 606 969$             | 12372          | 10 961$ |
 
 ### 2. Customer Revenue by Cohort
 
