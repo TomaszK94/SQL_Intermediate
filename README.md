@@ -229,6 +229,15 @@ WHERE
     first_purchase_date < (SELECT MAX(orderdate) FROM sales) - INTERVAL '6 months'
 ```
 
+| Customerkey | Cleaned Name       | Last Purchase Date | Customer Status |
+|-------------|--------------------|--------------------|-----------------|
+| 15          | Julian McGuigan    | 2021-03-08         | Churned         |
+| 180         | Gabriel Bosanquet  | 2023-08-28         | Churned         |
+| 185         | Gabrielle Castella | 2019-06-01         | Churned         |
+| 243         | Maya Atherton      | 2016-05-19         | Churned         |
+| 387         | Tahlia Underwood   | 2023-11-16         | Active          |
+| ...         | ...                | ...                | ...             |
+
 ``` SQL
 -- Statistics
 WITH customer_last_purchase AS(
