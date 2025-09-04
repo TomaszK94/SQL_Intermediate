@@ -272,6 +272,12 @@ FROM
 GROUP BY 
     customer_status
 ```
+
+| Customer Status | Percentage Customers |
+|-----------------|----------------------|
+| Active          | 9,47%                | 
+| Churned         | 90,53%               |
+
 ``` SQL
 -- Statistics by Cohort Year
 WITH customer_last_purchase AS(
