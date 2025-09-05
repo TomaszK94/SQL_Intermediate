@@ -161,6 +161,9 @@ ORDER BY
 | 2 - MID-VALUE    | 66 367 810$              | 24743          | 2 682$  |
 | 3 - HIGH-VALUE   | 135 606 969$             | 12372          | 10 961$ |
 
+**Visualization:**
+![Customer Segmentation](Resources/1.%20Customer%20Segmentation.jpg)
+
 ### 2. Customer Revenue by Cohort
 
 - Monitored revenue and customer counts across cohorts
