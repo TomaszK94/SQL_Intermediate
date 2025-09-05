@@ -344,3 +344,4 @@ GROUP BY
 
 - **Database:** `PostgreSQL`
 - **Analysis Tools:** `pgAdmin`, `Visual Studio Code`, `Dbeaver`
+- **Visualization** `Power BI`
