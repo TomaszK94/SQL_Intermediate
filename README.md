@@ -284,6 +284,9 @@ GROUP BY
 | Active          | 9,47%                | 
 | Churned         | 90,53%               |
 
+**Visualization:**
+![Churned vs Active](Resources/3.%20Churned%20vs%20Active%20Customers%20ALL.jpg)
+
 ``` SQL
 -- Statistics by Cohort Year
 WITH customer_last_purchase AS(
