@@ -197,6 +197,9 @@ GROUP BY
 |    2023     | 5 890           | 13 951 294$   | 2 369$              |
 |    2024     | 1 402           |  2 721 120$   | 1 941$              |
 
+**Visualization:**
+![Customer Revenue By Cohort](Resources/2.%20Customer%20Revenue.jpg)
+
 ### 3. Customer Retention
 
 - Detected customers at risk of churn
