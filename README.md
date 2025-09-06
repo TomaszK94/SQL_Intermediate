@@ -347,6 +347,9 @@ GROUP BY
 | Active          | 2023        | 9,64%                |
 | Churned         | 2023        | 90,36%               |
 
+**Visualization:**
+![Churned vs Active By Cohort](Resources/3.%20Churned%20vs%20Active%20Customers%20By%20Cohort.jpg)
+
 ## Strategic Recommendations
 
 ## Technical Details
