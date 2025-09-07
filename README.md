@@ -164,7 +164,7 @@ ORDER BY
 **Visualization:**
 ![Customer Segmentation](Resources/1.%20Customer%20Segmentation.jpg)
 
-**Conlusion:**
+**Conlusions:**
 - The high-value segment (25% of customers) contributes 66% of total revenue ($135,6M).
 
 - The mid-value segment (50% of customers) delivers 32% of revenue ($66,4M).
@@ -214,7 +214,7 @@ GROUP BY
 **Visualization:**
 ![Customer Revenue By Cohort](Resources/2.%20Customer%20Revenue.jpg)
 
-**Conclusion:**
+**Conclusions:**
 - Customer revenue is declining — earlier cohorts (2015–2018) spent over $5 000, while the 2024 cohort dropped to around $1 941.
 
 - Total revenue peaked in 2018–2019, and customer counts in 2022; however, both metrics began to decline first in 2020 and then again in 2023, following the 2022 peak.
@@ -377,6 +377,20 @@ GROUP BY
 
 **Visualization:**
 ![Churned vs Active By Cohort](Resources/3.%20Churned%20vs%20Active%20Customers%20By%20Cohort.jpg)
+
+**Conclusions:**
+- Cohort churn levels off at around 90% after 2–3 years, revealing a predictable long-term retention trend.
+
+- Retention rates remain consistently low (8–10%) across all cohorts, indicating that retention challenges are systemic rather than tied to specific years.
+
+- Recent cohorts (2022–2023) follow similar churn patterns, suggesting that without targeted intervention, future cohorts are likely to experience the same trend.
+
+**Insights:**
+- Enhance early engagement efforts by focusing on the first 1–2 years with onboarding incentives, loyalty programs, and personalized offers to boost long-term retention.
+
+- Reconnect with high-value churned customers through targeted win-back campaigns instead of broad retention initiatives, as reactivating valuable users can deliver higher ROI.
+
+- Anticipate and prevent churn by leveraging customer-specific warning signals to proactively engage at-risk users before they disengage.
 
 ## Strategic Recommendations
 
