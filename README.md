@@ -214,6 +214,13 @@ GROUP BY
 **Visualization:**
 ![Customer Revenue By Cohort](Resources/2.%20Customer%20Revenue.jpg)
 
+**Conclusion:**
+- Customer revenue is declining — earlier cohorts (2015–2018) spent over $5 000, while the 2024 cohort dropped to around $1 941.
+
+- Total revenue peaked in 2018–2019, and customer counts in 2022; however, both metrics began to decline first in 2020 and then again in 2023, following the 2022 peak.
+
+- Significant volatility in revenue and customer numbers, with steep declines in 2020 and 2024, highlights ongoing retention challenges.
+
 ### 3. Customer Retention
 
 - Detected customers at risk of churn
