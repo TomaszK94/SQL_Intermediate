@@ -164,6 +164,13 @@ ORDER BY
 **Visualization:**
 ![Customer Segmentation](Resources/1.%20Customer%20Segmentation.jpg)
 
+**Conlusion**
+- The high-value segment (25% of customers) contributes 66% of total revenue ($135,6M).
+
+- The mid-value segment (50% of customers) delivers 32% of revenue ($66,4M).
+
+- The low-value segment (25% of customers) generates just 2% of revenue ($4,3M).
+
 ### 2. Customer Revenue by Cohort
 
 - Monitored revenue and customer counts across cohorts
