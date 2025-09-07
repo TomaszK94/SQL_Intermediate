@@ -221,6 +221,13 @@ GROUP BY
 
 - Significant volatility in revenue and customer numbers, with steep declines in 2020 and 2024, highlights ongoing retention challenges.
 
+**Insights:**
+- Enhance retention and re-engagement by delivering personalized offers to recent cohorts (2023–2024) to reduce churn.
+
+- Smooth out revenue volatility by implementing loyalty programs or subscription models to encourage consistent spending.
+
+- Examine cohort variations and apply proven strategies from high-spending cohorts (2018–2019) to newer customer groups.
+
 ### 3. Customer Retention
 
 - Detected customers at risk of churn
