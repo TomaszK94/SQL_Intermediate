@@ -394,6 +394,30 @@ GROUP BY
 
 ## Strategic Recommendations
 
+1. `Customer Value Optimization` (Segmentation)
+
+- Introduce a VIP program for high-value customers contributing 66% of revenue.
+
+- Develop personalized upgrade paths for the mid-value segment.
+
+- Create price-sensitive promotions for the low-value segment to boost purchase frequency.
+
+2. `Cohort Performance Strategy` (Revenue by Cohort)
+
+- Engage 2023–2024 cohorts with personalized re-engagement offers.
+
+- Deploy loyalty or subscription programs to smooth revenue fluctuations.
+
+- Leverage successful strategies from high-spending 2018–2019 cohorts to enhance performance of newer customers.
+
+3. `Retention & Churn Prevention` (Customer Retention)
+
+- Strengthen engagement in the first 1–2 years using onboarding incentives and loyalty rewards.
+
+- Prioritize targeted win-back campaigns for high-value churned customers.
+
+- Implement a proactive intervention system to address at-risk customers before they lapse.
+
 ## Technical Details
 
 - **Database:** `PostgreSQL`
